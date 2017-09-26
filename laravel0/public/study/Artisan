@@ -1,0 +1,17 @@
+Artisan 的使用
+
+1.Artisan 简介
+    1.Artisan 是Laravel 中自带的命令行工具的名称
+    2.由强大的 Symfony Console组件驱动
+    3.提供了一些对应用开发有帮助的命令
+        1.查看所有可用的Artisan的命令（list）
+            php artisan 或者是  php artisan list
+        2.查看命令的帮助信息（help）
+            php artisan help migrate
+2.Artisan 基本使用
+    1.创建控制器
+        php artisan make:controller StudentController
+    2.创建模型
+        php artisan make:model Student
+    3.创建中间件
+        php artisan make:middleware Activity

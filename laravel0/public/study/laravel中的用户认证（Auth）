@@ -1,0 +1,19 @@
+Laravel 中的用户认证
+1.生成Auth所需的文件
+    php artisan make:auth
+
+2.数据迁移
+     php artisan make:migrate
+自定义迁移文件：
+     1.新建一个数据表students 表的迁移文件
+        php artisan make:migration create_students_table --create=students
+         参数可以用来指定数据表名，以及迁移文件是否要建立新的数据表
+     2.生成模型的同时生成迁移文件
+        php artisan make Student -m
+3.数据填充
+    1.创建填充文件，并完善填充文件
+        php artisan make:seeder StudentTableSeeder
+    2.执行单个填充文件
+        php artisan db:seed --class=StudentTableSeeder
+    3.批量执行填充文件
+        php artisan db:seed

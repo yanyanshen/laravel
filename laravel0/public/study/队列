@@ -1,0 +1,23 @@
+队列  配置 config/queue.php
+1.laravel队列服务为各种不同的后台队列提供了同意的API
+2.允许推迟耗时任务（例如发送邮件）的执行，从而大幅度提高web请求速度
+实现步骤
+1.迁移队列需要的数据表
+    1.创建迁移文件 php artisan queue:table
+    2.迁移 php artisan migrate
+2.编写任务类
+   用命令创建任务类 php artisan make:job SendEmail
+3.推送任务到队列
+    结合代码看
+4.运行队列监听器
+    php artisan queue:listen
+5.处理失败任务
+    1.建立迁移文件
+        php artisan queue:failed-table
+    2.迁移
+        php artisan migrate
+    3.删除某一错误队列 php artisan queue:forget ID号
+    4.删除所有错误队列 php artisan queue:forget ID号
+    5.重复执行某一错误队列 php artisan queue:retry ID号
+    6.重复执行所有错误队列 php artisan queue:retry all
+

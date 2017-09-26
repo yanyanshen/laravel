@@ -1,0 +1,67 @@
+Composer
+
+1.Composer 简介
+    包管理器：对于现代语言来说，包管理器基本是标配
+    比如：
+    Java            -- Maven
+    NodeJS          --   NPM
+    Objective-C     --  CocoaPods
+    PHP             --   PEAR
+
+    PEAR缺点：
+    1.依赖处理容易出问题
+    2.配置非常复杂
+    3.难用的命令行接口
+
+2.安装 Composer
+    1.Composer是PHP的一个依赖（dependency）管理工具，
+    不是一个包管理器。它涉及'packages' 和'libraries'
+    2.在项目中声明所依赖的外部工具库（libraries）Composer
+    会自动安装这些工具库依赖的库文件
+
+    1.Composer-Setup.exe Win 操作系统、需要翻墙
+        2.composer.phar 通用的安装方式、不需要翻墙
+
+        3.下载composer.phar
+
+            局部安装
+                1.直接下载 http://getcomposer.org/download/
+                下载后可将文件 复制到 咱们的项目根目录下  然后通过终端命令 php composer.phar 检查是否下载成功 是否可用
+                2.命令行下载
+                php -r "readfile('https://getcomposer.org/installer');" | php
+                下载成功后 打开存放下载文件的目录 然后通过终端命令 输入命令 php composer.phar 检查是否下载成功 是否可用
+            全局安装
+                1.Mac或Linux 系统
+                    sudo mv composer.phar /usr/local/bin/composer
+
+
+                2.Win系统
+                    1.将composer.phar拷贝到php.exe同级目录
+                    2.新建composer.bat文件，并将下面的代码保存到该文件中
+                    3.将 @php "%~dp0composer.phar%"* 这串代码保存到 新建的composer.bat文件中
+3.Composer中国全量镜像
+    镜像说明
+    1.安装包的数据只从github.com上下载的，安装包的元数据是从packagist.org上下载的
+    2.国外的网站链接速度很慢，并且随时可能被翻墙
+    3.Composer中国全镜像所做的就是缓存所有的安装包和元数据到国内的机房并通过国内的CDN进行加速，
+    这样就不用再去想国外的网站发起请求
+
+    配置
+    1.查看当前的镜像地址 composer config -g repo.packagist
+    2.启用本镜像服务
+        1.系统全局配置
+        2.单个项目配置
+
+4.使用Composer
+    主要命令
+    1.搜索（search）
+    2.展示（show）
+    3.申明依赖（require）
+    4.安装（install）使用Composer安装laravel
+        1.Composer Create-Project 命令安装laravel
+            composer create-project  --prefer-dist [别名]
+        2.laravel安装器
+            通过安装器 安装laravel框架
+            composer global require "laravel/installer"
+            laravel new blog
+    5.更新（update）

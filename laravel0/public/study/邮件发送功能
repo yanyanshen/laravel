@@ -1,0 +1,9 @@
+邮件（SwiftMailer）
+1.laravel 邮件功能基于热门的SwiftMailer函数库之上，提供了一个简洁的API功能
+2.laravel为SMTP、Mailgun、Manderill、Amazon、SES、php的mail函数、以及sendmail提供了
+    驱动从而允许你快速通过本地或云服务发送邮件
+3.配置
+    1.位置 config/mail.php
+    2.发送
+        1.发送纯文本格式  Mail::raw()
+        2.发送html格式   Mail::send()

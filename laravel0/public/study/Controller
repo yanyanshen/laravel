@@ -1,0 +1,32 @@
+Controller
+1.controller之Request
+    laravel 请求用的sysmfony/http-foundatio
+    请求了包含了 $_GET,$_POST,$_COOKIE,$_FILES,$_SERVER
+
+    知识点：1获取请求中的值 2判断请求类型
+2.controller之session
+    由于http协议是无状态的（Stateless）的 ，所以sesion提供一种保存用户数据的方法
+    laravel支持了多种session后端驱动，并提供了清楚统一的API.也内置支持
+    如Memcached、Redis和数据库的后端驱动。默认使用'file'的session驱动
+    session的配置文件在config/session.php中
+
+    使用的三种方式
+    1.HTTP request类的session（）方法
+    2.session（）辅助函数
+    3.session facade
+3.controller之response
+相应的常见类型
+    1.字符串
+    2.视图
+    3.Json
+    4.重定向
+4.controller之middleware
+中间件作用：laravel中间件提供了一个方便的机制来过滤进入程序的HTTP请求
+
+比如 有一个活动，在指定日期后开始，如果没有开始则只能访问宣传页面
+
+过程：
+1.新建中间件
+2.注册中间件
+3.使用中间件
+4.中间件的前置和后置操作

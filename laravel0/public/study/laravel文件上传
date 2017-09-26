@@ -1,0 +1,7 @@
+文件上传
+1.文件系统
+    1.laravel的文件系统是基于Frank de Jonge的Flysystem 扩展包
+    2.提供了简单的接口，可以操作本地端空间、Amazon S3、Rackspace Cloud Storage
+    3.可以非常简单的切换不同保存方式，但是使用相同的API操作
+2.配置文件
+    1.位置 config/filestems.php

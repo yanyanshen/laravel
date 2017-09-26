@@ -1,0 +1,12 @@
+错误与日志
+1.Debug 模式
+    1.配置
+        config/app.php
+        进行本地开发时，应该配置APP_DEBUG环境变量为true，在线上环境，这个值应该永远为false
+2.HTTP异常
+    1.有些异常描述来自服务器的HTTP错误码
+    2.例如，这可能是一个"页面未找到" 错误（404），"认证失败错误" (401) 亦或是程序
+    出错误造成的500错误
+3.日志
+    laravel 日志工具基于强大的Monolog库，提供了single,daily,syslog和erorlog日志模式
+    debug，info，notice，warning，error，critical和alert七个错误级别

@@ -1,0 +1,13 @@
+缓存
+1.介绍
+    1.laravel 为各种不同的混村系统提供了一致的API
+    2.laravel支持各种常见的后端缓存系统，如file、memcached和Redis
+
+2.主要方法
+    1.put()
+    2.get()
+    3.add()
+    4.forever()
+    5.pull()
+    6.has()
+    7.forget()
